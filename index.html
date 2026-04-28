@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Public Grievance System ప్రజా సమస్యల పరిష్కార వేధిక – Udayagiri ఉదయగిరి నియోజకవర్గం Government of Andhra Pradesh ఆంధ్రప్రదేశ్ రాష్ట్ర ప్రభుత్వం</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Google Fonts: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <div class="announcement-bar">
+    <div class="marquee-container">
+      <div class="marquee-content">
+        <i class="fas fa-bullhorn me-2"></i> Welcome to Smart Public Grievance System | Submit your complaints online and track their status transparently | Udayagiri Constituency | Government of Andhra Pradesh
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN HEADER -->
+  <header class="main-header">
+    <div class="container">
+      <div class="row align-items-center py-3">
+        <div class="col-md-2 col-4 text-center">
+          <img src="logo.jpeg" alt="Government Logo" class="header-logo img-fluid">
+        </div>
+        <div class="col-md-8 col-8 text-center">
+          <h1 class="portal-title">Public Grievance System</h1>
+          <h2 class="portal-subtitle">[Udayagiri Constituency]</h2>
+          <p class="portal-tagline">Government of Andhra Pradesh</p>
+        </div>
+        <div class="col-md-2 d-none d-md-block text-center">
+          <img src="mla.jpeg" alt="Hon'ble Leader" class="leader-img img-fluid rounded-circle">
+          <p class="leader-name mt-2">Honourable MLA Udayagiri</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar navbar-expand-lg navbar-dark main-nav">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link active" href="#"><i class="fas fa-home me-1"></i> Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#complaint-section"><i class="fas fa-edit me-1"></i> Register Complaint</a></li>
+          <li class="nav-item"><a class="nav-link" href="#track-section"><i class="fas fa-search me-1"></i> Track Status</a></li>
+          <li class="nav-item"><a class="nav-link" href="#mandals-section"><i class="fas fa-map-marker-alt me-1"></i> Mandals</a></li>
+          <li class="nav-item"><a class="nav-link" href="#works-section"><i class="fas fa-hammer me-1"></i> Development Works</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact-section"><i class="fas fa-phone me-1"></i> Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+    <div class="container text-center">
+      <h1 class="hero-title">Public Grievance System</h1>
+      <p class="hero-subtitle">Submit and track complaints transparently</p>
+      
+      <div class="hero-buttons mb-4">
+        <a href="#complaint-section" class="btn btn-primary btn-lg me-3">
+          <i class="fas fa-edit me-2"></i>Register Complaint
+        </a>
+        <a href="#track-section" class="btn btn-outline-primary btn-lg">
+          <i class="fas fa-search me-2"></i>Track Complaint
+        </a>
+      </div>
+      
+      <div class="search-bar mx-auto">
+        <div class="input-group">
+          <span class="input-group-text bg-white border-end-0"><i class="fas fa-search text-muted"></i></span>
+          <input type="text" class="form-control border-start-0" id="heroSearch" placeholder="Search by complaint ID, name, or mandal...">
+          <button class="btn btn-primary" type="button" onclick="handleSearch()">Search</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK ACTION CARDS -->
+  <section class="quick-actions py-5">
+    <div class="container">
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-5">
+          <div class="action-card" onclick="scrollToSection('complaint-section')">
+            <div class="action-icon">
+              <i class="fas fa-file-alt"></i>
+            </div>
+            <h3>Submit Complaint</h3>
+            <p>Register your grievance online with required details and attachments</p>
+            <span class="action-link">Get Started <i class="fas fa-arrow-right ms-1"></i></span>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="action-card" onclick="scrollToSection('track-section')">
+            <div class="action-icon icon-yellow">
+              <i class="fas fa-search"></i>
+            </div>
+            <h3>Track Status</h3>
+            <p>Check the real-time status of your submitted complaints</p>
+            <span class="action-link">Track Now <i class="fas fa-arrow-right ms-1"></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LATEST DEVELOPMENT WORKS CAROUSEL -->
+  <section id="works-carousel-section" class="works-carousel-section py-5 bg-light">
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <h2><i class="fas fa-images me-2"></i>Latest Development Works & Activities</h2>
+        <p class="text-muted">Ongoing and completed development projects in the constituency</p>
+      </div>
+      <div class="works-carousel-wrapper">
+        <div class="works-carousel" id="worksCarousel">
+          <!-- Works will be loaded dynamically from Firebase -->
+        </div>
+        <button class="carousel-btn carousel-prev" onclick="moveCarousel(-1)"><i class="fas fa-chevron-left"></i></button>
+        <button class="carousel-btn carousel-next" onclick="moveCarousel(1)"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- MANDAL SECTION -->
+  <section id="mandals-section" class="mandals-section py-5">
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <h2><i class="fas fa-map-marked-alt me-2"></i>Mandals</h2>
+        <p class="text-muted">Select your mandal to view area-specific grievances and developments</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="mandal-card" onclick="filterByMandal('Udayagiri')">
+            <div class="mandal-icon"><i class="fas fa-landmark"></i></div>
+            <h4>Udayagiri</h4>
+            <span class="mandal-link">View Works</span>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="mandal-card" onclick="filterByMandal('Seetharamapuram')">
+            <div class="mandal-icon"><i class="fas fa-landmark"></i></div>
+            <h4>Seetharamapuram</h4>
+            <span class="mandal-link">View Works</span>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="mandal-card" onclick="filterByMandal('Duttalur')">
+            <div class="mandal-icon"><i class="fas fa-landmark"></i></div>
+            <h4>Duttalur</h4>
+            <span class="mandal-link">View Works</span>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="mandal-card" onclick="filterByMandal('Varikuntapadu')">
+            <div class="mandal-icon"><i class="fas fa-landmark"></i></div>
+            <h4>Varikuntapadu</h4>
+            <span class="mandal-link">View Works</span>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="mandal-card" onclick="filterByMandal('Vinjamuru')">
+            <div class="mandal-icon"><i class="fas fa-landmark"></i></div>
+            <h4>Vinjamuru</h4>
+            <span class="mandal-link">View Works</span>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="mandal-card" onclick="filterByMandal('Kaligiri')">
+            <div class="mandal-icon"><i class="fas fa-landmark"></i></div>
+            <h4>Kaligiri</h4>
+            <span class="mandal-link">View Works</span>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="mandal-card" onclick="filterByMandal('Kondapuram')">
+            <div class="mandal-icon"><i class="fas fa-landmark"></i></div>
+            <h4>Kondapuram</h4>
+            <span class="mandal-link">View Works</span>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="mandal-card" onclick="filterByMandal('Jaladanki')">
+            <div class="mandal-icon"><i class="fas fa-landmark"></i></div>
+            <h4>Jaladanki</h4>
+            <span class="mandal-link">View Works</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEVELOPMENT WORKS DISPLAY SECTION -->
+  <section id="works-section" class="works-section py-5 bg-light">
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <h2><i class="fas fa-hammer me-2"></i>Development Works</h2>
+        <p class="text-muted" id="worksFilterText">Showing all development works in the constituency</p>
+        <button id="clearMandalFilter" class="btn btn-sm btn-outline-danger mt-2" style="display:none;" onclick="clearMandalFilter()">
+          <i class="fas fa-times me-1"></i> Clear Filter
+        </button>
+      </div>
+      <div id="publicWorks" class="works-gallery row g-4"></div>
+    </div>
+  </section>
+
+  <!-- COMPLAINT FORM SECTION -->
+  <section id="complaint-section" class="complaint-section py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="section-header text-center mb-4">
+            <h2><i class="fas fa-edit me-2"></i>Submit Your Complaint</h2>
+            <p class="text-muted">Fill in the details below to register your grievance</p>
+          </div>
+          
+          <div class="card form-card shadow-lg">
+            <div class="card-body p-4 p-md-5">
+              <form id="complaintForm">
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label"><i class="fas fa-user me-1 text-red"></i> Your Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label"><i class="fas fa-phone me-1 text-red"></i> Phone Number</label>
+                    <input type="text" class="form-control" id="phone" placeholder="Enter phone number" required>
+                  </div>
+                </div>
+                
+                <div class="mb-3">
+                  <label class="form-label"><i class="fas fa-map-marker-alt me-1 text-red"></i> Select Mandal</label>
+                  <select class="form-select" id="mandal" required>
+                    <option value="">Select Mandal</option>
+                    <option>Udayagiri</option>
+                    <option>Seetharamapuram</option>
+                    <option>Duttalur</option>
+                    <option>Varikuntapadu</option>
+                    <option>Vinjamuru</option>
+                    <option>Kaligiri</option>
+                    <option>Kondapuram</option>
+                    <option>Jaladanki</option>
+                  </select>
+                </div>
+                
+                <div class="mb-3">
+                  <label class="form-label"><i class="fas fa-comment-alt me-1 text-red"></i> Describe Your Grievance</label>
+                  <textarea class="form-control" id="issue" rows="4" placeholder="Describe your problem / grievance in detail" required></textarea>
+                </div>
+                
+                <div class="mb-4">
+                  <label class="form-label"><i class="fas fa-paperclip me-1 text-red"></i> Attachments</label>
+                  <label for="attachments" class="file-label">
+                    <i class="fas fa-cloud-upload-alt me-2"></i> Attach Photos / Files (optional)
+                  </label>
+                  <input type="file" id="attachments" multiple accept="image/*,.pdf,.doc,.docx" style="display: none;">
+                  <div id="filePreview" style="display: none;"></div>
+                </div>
+                
+                <button type="submit" id="submitBtn" class="btn btn-submit btn-lg w-100">
+                  <i class="fas fa-paper-plane me-2"></i>Submit Complaint
+                </button>
+              </form>
+              
+              <div id="successMessage" class="success-message" style="display: none;">
+                <div class="text-center py-4">
+                  <i class="fas fa-check-circle fa-4x text-success mb-3"></i>
+                  <h4 class="text-success">Complaint Successfully Submitted!</h4>
+                  <p>Your grievance has been registered. You will receive an update shortly.</p>
+                  <button onclick="submitAnother()" class="btn btn-success mt-2">
+                    <i class="fas fa-plus me-1"></i> Submit Another
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRACK SECTION -->
+  <section id="track-section" class="track-section py-5 bg-light">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 text-center">
+          <div class="section-header mb-4">
+            <h2><i class="fas fa-search me-2"></i>Track Your Complaint</h2>
+            <p class="text-muted">Enter your details to check the current status</p>
+          </div>
+          <div class="card shadow-sm p-4">
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" id="trackInput" placeholder="Enter Complaint ID or Phone Number">
+              <button class="btn btn-primary" type="button" onclick="trackComplaint()">
+                <i class="fas fa-search me-1"></i> Track
+              </button>
+            </div>
+            <div id="trackResult" class="text-start mt-3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact-section" class="contact-section py-5">
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <h2><i class="fas fa-phone-alt me-2"></i>Contact & Helpline</h2>
+        <p class="text-muted">Reach out to us for any assistance</p>
+      </div>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-4">
+          <div class="contact-card text-center">
+            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+            <h4>Helpline</h4>
+            <p>1800-XXX-XXXX</p>
+            <p class="text-muted small">Mon - Sun: 9:00 AM - 6:00 PM</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="contact-card text-center">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <h4>Email</h4>
+            <p>grievance@ap.gov.in</p>
+            <p class="text-muted small">We respond within 24 hours</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="contact-card text-center">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <h4>Office Address</h4>
+            <p>MLA Camp Office, Bommaraju Cheruvu, Vinjamuru, Nellore District, Andhra Pradesh</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="row py-5">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <h4><i class="fas fa-building me-2"></i> Smart Public Grievance System</h4>
+          <p class="mt-3">A transparent and efficient platform for citizens to register and track their grievances with the Government of Andhra Pradesh.</p>
+          <div class="social-links mt-3">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <h4><i class="fas fa-link me-2"></i> Quick Links</h4>
+          <ul class="footer-links mt-3">
+            <li><a href="#complaint-section"><i class="fas fa-chevron-right me-1"></i> Register Complaint</a></li>
+            <li><a href="#track-section"><i class="fas fa-chevron-right me-1"></i> Track Status</a></li>
+            <li><a href="#mandals-section"><i class="fas fa-chevron-right me-1"></i> Mandals</a></li>
+            <li><a href="#works-section"><i class="fas fa-chevron-right me-1"></i> Development Works</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <h4><i class="fas fa-phone-alt me-2"></i> Contact & Helpline</h4>
+          <ul class="footer-contact mt-3">
+            <li><i class="fas fa-phone me-2"></i> Helpline: 1800-XXX-XXXX</li>
+            <li><i class="fas fa-envelope me-2"></i> grievance@ap.gov.in</li>
+            <li><i class="fas fa-map-marker-alt me-2"></i> MLA Camp Office, Bommaraju Cheruvu, Vinjamuru, Nellore District, Andhra Pradesh</li>
+            <li><i class="fas fa-clock me-2"></i> Mon - Sun: 9:00 AM - 6:00 PM</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom text-center py-3">
+        <p class="mb-0">&copy; 2026 Smart Public Grievance System. Government of Andhra Pradesh. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script type="module" src="script.js"></script>
+</body>
+</html>
+
